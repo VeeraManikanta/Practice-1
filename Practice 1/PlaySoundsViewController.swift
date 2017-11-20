@@ -28,41 +28,25 @@ class PlaySoundsViewController: UIViewController {
     
     @IBAction func playSoundForButton(_ sender: UIButton) {
         switch(ButtonType(rawValue: sender.tag)!) {
-       
         case .chipmunk:
             playSound(pitch: 1000)
         case .vader:
             playSound(pitch: -1000)
-        
         }
-        
         configureUI(.playing)
     }
     
     @IBAction func stopButtonPressed(_ sender: Any) {
          stopAudio()
+         print("Recording Stopped")
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupAudio()
-        // Do any additional setup after loading the view.
     }
     
     override func viewWillAppear(_ animated: Bool) {
         configureUI(.notPlaying)
     }
-
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

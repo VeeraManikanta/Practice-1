@@ -30,13 +30,13 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap to Record" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jv2-2K-kR3" userLabel="Record Progress">
-                                <rect key="frame" x="134" y="487" width="107" height="20.5"/>
+                                <rect key="frame" x="134" y="431" width="107" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4zv-NJ-Dnz" userLabel="Stop Button">
-                                <rect key="frame" x="155.5" y="590.5" width="64" height="64"/>
+                                <rect key="frame" x="155.5" y="471.5" width="64" height="64"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="64" id="A1r-sX-L6C"/>
                                     <constraint firstAttribute="height" constant="64" id="pDc-Hq-cit"/>
@@ -51,8 +51,8 @@
                         <constraints>
                             <constraint firstItem="vms-7m-UXz" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="8qX-4e-f0Y"/>
                             <constraint firstItem="Jv2-2K-kR3" firstAttribute="centerX" secondItem="vms-7m-UXz" secondAttribute="centerX" id="NrM-Gk-VAN"/>
-                            <constraint firstItem="4zv-NJ-Dnz" firstAttribute="top" secondItem="Jv2-2K-kR3" secondAttribute="bottom" constant="83" id="SEe-KL-9ig"/>
-                            <constraint firstItem="Jv2-2K-kR3" firstAttribute="top" secondItem="vms-7m-UXz" secondAttribute="bottom" constant="76" id="cN3-1H-NNS"/>
+                            <constraint firstItem="4zv-NJ-Dnz" firstAttribute="top" secondItem="Jv2-2K-kR3" secondAttribute="bottom" constant="20" id="SEe-KL-9ig"/>
+                            <constraint firstItem="Jv2-2K-kR3" firstAttribute="top" secondItem="vms-7m-UXz" secondAttribute="bottom" constant="20" id="cN3-1H-NNS"/>
                             <constraint firstItem="vms-7m-UXz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="lUX-jg-oKA"/>
                             <constraint firstItem="4zv-NJ-Dnz" firstAttribute="centerX" secondItem="Jv2-2K-kR3" secondAttribute="centerX" id="zaI-Rh-VZs"/>
                         </constraints>
@@ -81,17 +81,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b3i-Km-Ejx" userLabel="Stop Button">
-                                <rect key="frame" x="155.5" y="483" width="64" height="64"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="64" id="ZH6-uG-XHe"/>
-                                    <constraint firstAttribute="height" constant="64" id="k3J-vL-mTP"/>
-                                </constraints>
-                                <state key="normal" image="Stop"/>
-                                <connections>
-                                    <action selector="stopButtonPressed:" destination="j1g-Rm-N5V" eventType="touchUpInside" id="SIl-7d-J4p"/>
-                                </connections>
-                            </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="eyj-w3-5aA">
                                 <rect key="frame" x="16" y="64" width="343" height="603"/>
                                 <subviews>
@@ -116,20 +105,31 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z2S-x8-eyW" userLabel="Stop Button">
+                                <rect key="frame" x="155.5" y="483" width="64" height="64"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="9a7-sV-EBa"/>
+                                    <constraint firstAttribute="width" constant="64" id="pvN-qi-2WE"/>
+                                </constraints>
+                                <state key="normal" image="Stop"/>
+                                <connections>
+                                    <action selector="stopButtonPressed:" destination="j1g-Rm-N5V" eventType="touchUpInside" id="cU2-iY-H9i"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="eyj-w3-5aA" secondAttribute="trailing" id="5FS-QX-1Dp"/>
-                            <constraint firstItem="WpQ-QY-rsb" firstAttribute="top" secondItem="b3i-Km-Ejx" secondAttribute="bottom" constant="120" id="FjY-yp-toe"/>
+                            <constraint firstItem="WpQ-QY-rsb" firstAttribute="top" secondItem="z2S-x8-eyW" secondAttribute="bottom" constant="120" id="8vE-Tr-9R7"/>
                             <constraint firstItem="eyj-w3-5aA" firstAttribute="leading" secondItem="PLe-AV-MEB" secondAttribute="leadingMargin" id="ONh-Eh-qie"/>
                             <constraint firstItem="WpQ-QY-rsb" firstAttribute="top" secondItem="eyj-w3-5aA" secondAttribute="bottom" id="cDA-op-8Rv"/>
-                            <constraint firstItem="b3i-Km-Ejx" firstAttribute="centerX" secondItem="PLe-AV-MEB" secondAttribute="centerX" id="eSp-Kv-HDL"/>
+                            <constraint firstItem="z2S-x8-eyW" firstAttribute="centerX" secondItem="PLe-AV-MEB" secondAttribute="centerX" id="gr9-rt-8nh"/>
                             <constraint firstItem="eyj-w3-5aA" firstAttribute="top" secondItem="KfT-HV-bHK" secondAttribute="bottom" id="nUB-1s-Nwp"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="chipmunkButton" destination="BZJ-FF-om2" id="dZD-D7-qdU"/>
-                        <outlet property="stopButton" destination="b3i-Km-Ejx" id="wen-bc-r5X"/>
+                        <outlet property="stopButton" destination="z2S-x8-eyW" id="bNg-J8-SrJ"/>
                         <outlet property="vaderButton" destination="mm9-yS-hpR" id="KdB-7A-sNf"/>
                     </connections>
                 </viewController>
